@@ -1,9 +1,6 @@
 import { app, BrowserWindow, Tray } from "electron";
-import { add } from "@common/utils";
 import { join } from "path";
 import { pathToFileURL } from "url";
-
-add(1, 2);
 
 const isDevelopment = process.env.NODE_ENV === "development";
 
