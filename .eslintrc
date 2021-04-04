@@ -1,0 +1,15 @@
+{
+  "extends": "airbnb-typescript-prettier",
+  "rules": {
+    "react/jsx-props-no-spreading": "off",
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  }
+}
