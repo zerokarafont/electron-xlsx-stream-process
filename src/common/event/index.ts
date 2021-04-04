@@ -1,4 +1,2 @@
 /** 事件名 */
-export enum EventConstants {
-  TEST = "test",
-}
+export enum EventConstants {}
