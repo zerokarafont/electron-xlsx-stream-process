@@ -12,7 +12,8 @@
     "target": "esnext",
     "module": "esnext",
     "jsx": "react",
-    "sourceMap": true
+    "sourceMap": true,
+    "baseUrl": "../../src"
   },
   "include": [
     "../renderer/**/*",

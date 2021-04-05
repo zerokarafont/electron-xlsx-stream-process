@@ -5,14 +5,6 @@
     "module": "CommonJS",
     "outDir": "../../app",
     "baseUrl": "../../src",
-    "paths": {
-      "@main/*": [
-        "main/*"
-      ],
-      "@common/*": [
-        "common/*"
-      ],
-    },
     "plugins": [
       // Transform paths in output .js files
       {

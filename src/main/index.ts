@@ -1,6 +1,7 @@
-import { app, BrowserWindow, Tray } from "electron";
+import { app, BrowserWindow } from "electron";
 import { join } from "path";
 import { pathToFileURL } from "url";
+import configureSecurityStragety from "@main/security";
 
 const isDevelopment = process.env.NODE_ENV === "development";
 
@@ -8,6 +9,8 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
+    titleBarStyle: "hidden",
+    autoHideMenuBar: true,
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
@@ -18,9 +21,9 @@ function createWindow() {
     win.show();
   });
 
-  const icon = join(__dirname, "public/icon.ico");
-  const tray = new Tray(icon);
-  tray.setToolTip("防火墙日志分析工具");
+  // const icon = join(__dirname, "public/icon.ico");
+  // const tray = new Tray(icon);
+  // tray.setToolTip("防火墙日志分析工具");
 
   if (isDevelopment) {
     win.loadURL("http://localhost:3000");
@@ -32,7 +35,12 @@ function createWindow() {
   }
 }
 
-app.whenReady().then(createWindow);
+function setupApp() {
+  configureSecurityStragety();
+  createWindow();
+}
+
+app.whenReady().then(setupApp);
 
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {

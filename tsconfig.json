@@ -20,6 +20,17 @@
     "importHelpers": true,
     "sourceMap": false,
     "baseUrl": "./src",
+    "paths": {
+      "@main/*": [
+        "main/*"
+      ],
+      "@renderer/*": [
+        "renderer/*"
+      ],
+      "@common/*": [
+        "common/*"
+      ],
+    },
   },
   "exclude": [
     "node_modules",
