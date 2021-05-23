@@ -9,6 +9,8 @@ interface IConfig {
   appName: string;
   /** 应用图标 */
   appIcon: string;
+  /** sqlite数据库名称 */
+  dbName: string;
 }
 
 /**
@@ -43,6 +45,7 @@ const config: IConfig = {
   },
   appName: "防火墙日志分析工具",
   appIcon: "public/favicon.png",
+  dbName: "firewall.db",
 };
 
 export default config;

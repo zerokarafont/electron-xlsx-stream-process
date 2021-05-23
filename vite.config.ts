@@ -7,6 +7,7 @@ import { outDirRenderer, rendererPath } from "./scripts/common";
 export default defineConfig({
   plugins: [reactRefresh()],
   base: "./",
+  publicDir: resolve(__dirname, "public"),
   root: rendererPath,
   build: {
     outDir: outDirRenderer,

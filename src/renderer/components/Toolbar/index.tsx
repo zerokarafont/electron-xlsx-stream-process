@@ -20,10 +20,12 @@ export interface IToolbarItem {
 
 export interface IToolbar {
   data: IToolbarItem[];
+  /** 数据库缓存大小 */
+  cacheSize?: string;
   onClick: (item: IToolbarItem) => void;
 }
 
-export const Toolbar: FC<IToolbar> = memo(({ data, onClick }) => {
+export const Toolbar: FC<IToolbar> = memo(({ data, cacheSize, onClick }) => {
   const [current, setCurrent] = useState<number>();
 
   const handleClick = (item: IToolbarItem, idx: number) => {
@@ -50,6 +52,11 @@ export const Toolbar: FC<IToolbar> = memo(({ data, onClick }) => {
             />
           </StackItem>
         ))}
+        <div
+          style={{ display: "inline-flex", alignItems: "center", fontSize: 12 }}
+        >
+          缓存大小: {cacheSize}
+        </div>
       </Stack>
     </>
   );

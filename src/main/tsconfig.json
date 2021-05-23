@@ -15,13 +15,14 @@
         "transform": "typescript-transform-paths",
         "afterDeclarations": true
       }
-    ]
+    ],
   },
+  "files": ["../@types/global.d.ts"],
   "include": [
     "../main/**/*",
     "../common/**/*"
   ],
   "exclude": [
     "../renderer/**/*"
-  ]
+  ],
 }

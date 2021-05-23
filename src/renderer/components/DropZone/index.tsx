@@ -61,7 +61,9 @@ export const DropZone: FC<IDropProps> = memo(({ onDrop }) => {
           })}
         />
         <p>
-          {isDragReject ? "检测到不支持的文件格式" : "拖拽文件或者文件夹到此处"}
+          {isDragReject
+            ? "检测到不支持的文件格式"
+            : "拖拽多个文件或者文件夹到此处"}
         </p>
       </div>
     </>

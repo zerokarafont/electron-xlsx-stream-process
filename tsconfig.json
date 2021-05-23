@@ -31,10 +31,12 @@
         "common/*"
       ],
     },
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
   },
   "exclude": [
     "node_modules",
     "app",
-    "dist"
+    "dist",
+    "test"
   ],
 }

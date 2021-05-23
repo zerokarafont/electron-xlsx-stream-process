@@ -7,17 +7,18 @@
       "ESNext"
     ],
     "types": [
-      "vite/client"
+      "vite/client",
     ],
     "target": "esnext",
     "module": "esnext",
     "jsx": "react",
     "sourceMap": true,
-    "baseUrl": "../../src"
+    "baseUrl": "../../src",
   },
+  "files": ["../@types/global.d.ts"],
   "include": [
     "../renderer/**/*",
-    "../common/**/*"
+    "../common/**/*" ,
   ],
   "exclude": [
     "../main/**/*"

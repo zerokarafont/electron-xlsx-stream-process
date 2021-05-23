@@ -1,5 +1,0 @@
-function clean() {
-  //
-}
-
-clean();
